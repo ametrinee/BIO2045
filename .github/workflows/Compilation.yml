@@ -1,0 +1,83 @@
+name: Compilation
+on:
+    push:
+        branches: ["main"]
+
+jobs:
+    compilation:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: "Set up Julia"
+              uses: julia-actions/setup-julia@v2
+              with:
+                  version: 1
+            - name: "Instantiate project and add Literate"
+              run: julia -e 'import Pkg; Pkg.activate("."); Pkg.instantiate(); Pkg.add("Literate")'
+              shell: bash
+            - name: "Run the document and generate the .md script"
+              run: julia --project .assets/build.jl
+              shell: bash
+            - name: Upload the MD file
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Markdown
+                  path: travail.md
+            - name: "Install pandoc"
+              uses: pandoc/actions/setup@v1
+            - name: "Run pandoc to generate the typst file "
+              run: pandoc travail.md -o travail.typ --template=.assets/template.typ
+            - name: "Run pandoc to generate the html file"
+              run: pandoc travail.md -o docs/index.html
+            - name: "Get the Libertinus fonts"
+              run: |
+                  wget https://github.com/alerque/libertinus/releases/download/v7.051/Libertinus-7.051.zip
+                  unzip Libertinus-7.051.zip
+                  mkdir -p ~/.fonts/
+                  mv Libertinus-7.051/static/OTF/*.otf ~/.fonts/
+                  fc-cache -fv
+            - name: "Get the JuliaMono fonts"
+              run: |
+                  wget https://github.com/cormullion/juliamono/releases/download/v0.062/JuliaMono-ttf.zip
+                  unzip JuliaMono-ttf.zip
+                  mv JuliaMono*.ttf ~/.fonts/
+                  fc-cache -fv
+            - name: "Download Typst"
+              run: |
+                  wget https://github.com/typst/typst/releases/download/v0.14.1/typst-x86_64-unknown-linux-musl.tar.xz
+                  tar -xvf typst-x86_64-unknown-linux-musl.tar.xz
+            - name: "Run typst to generate the PDF file"
+              run: ./typst-x86_64-unknown-linux-musl/typst compile travail.typ
+            - name: Upload the typst file
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Typst
+                  path: travail.typ
+            - name: "Move the figures to the docs folder"
+              run: cp travail-*.png docs
+              shell: bash
+            - name: "Moves the PDF to the docs/ folder"
+              run: mv travail.pdf docs/travail.pdf
+            - name: Upload the PDF
+              uses: actions/upload-artifact@v4
+              with:
+                  name: Travail
+                  path: docs/travail.pdf
+            - name: Prepare the web pages
+              id: deployment
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: docs/
+    publication:
+        runs-on: ubuntu-latest
+        needs: compilation
+        permissions:
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - name: Deploy to GitHub pages
+              id: deployment
+              uses: actions/deploy-pages@v4
