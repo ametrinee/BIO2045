@@ -1,15 +1,15 @@
 # ---
-# title: Titre du travail
-# repository: tpoisot/BIO245-modele
+# title: Effet du feu contrôlé sur le maintien des prairies : simulation d'un modèle de transition végétale
+# repository: ametrinee/BIO2045
 # auteurs:
-#    - nom: Auteur
-#      prenom: Premier
+#    - nom: Hong
+#      prenom: Sumi
+#      matricule: 20233311
+#      github: ametrinee
+#    - nom: Nguyen
+#      prenom: Mathilde
 #      matricule: XXXXXXXX
-#      github: premierAuteur
-#    - nom: Auteur
-#      prenom: Deuxième
-#      matricule: XXXXXXXX
-#      github: DeuxiAut
+#      github: Mathilde389
 # ---
 
 # # Introduction
