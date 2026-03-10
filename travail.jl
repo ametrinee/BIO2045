@@ -59,7 +59,7 @@ end
 function _sim_stochastic!(timeseries, transitions, generation)
     for state in axes(timeseries, 1)
         pop_change = rand(Multinomial(timeseries[state, generation], transitions[state, :]))
-        timeseries[:, generation+1] .+ pop_change
+        timeseries[:, generation+1] .+= pop_change
     end
 end
 
