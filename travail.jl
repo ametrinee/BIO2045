@@ -1,5 +1,5 @@
 # ---
-# title: Effet du feu contrôlé sur le maintien des prairies : simulation d'un modèle de transition végétale
+# title: "Effet du feu contrôlé sur le maintien des prairies : simulation d'un modèle de transition végétale"
 # repository: ametrinee/BIO2045
 # auteurs:
 #    - nom: Hong
