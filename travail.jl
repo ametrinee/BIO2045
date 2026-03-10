@@ -33,8 +33,6 @@ Random.seed!(123456)
 
 # ## 2. ...
 
-(Utilise "##" pour commenter au code)
-
 function check_transition_matrix!(T)
     for ligne in axes(T, 1)
         if sum(T[ligne, :]) != 1
@@ -85,6 +83,7 @@ function simulation(transitions, states; generations=500, stochastic=false)
 end
 
 ## États
+
 ## Barren, Grass, Shrubs (= Barren, Herbes, Arbustes)
 s = [10, 80, 10] ## On va commencer l'état où le Grass est dominant (= 80)
 
