@@ -123,6 +123,8 @@ axislegend(ax1)
 tightlimits!(ax1)
 f1
 
+save("travail-sans-feu.png", f1)
+
 ## Visualisation de scénario 2 : avec intervention
 f2 = Figure();
 ax2 = Axis(f2[1, 1], title="Avec feu contrôlé", xlabel="Nb. générations", ylabel="Nb. parcelles")
@@ -134,6 +136,8 @@ end
 axislegend(ax2)
 tightlimits!(ax2)
 f2
+
+save("travail-avec-feu.png", f2)
 
 # # Présentation des résultats
 
