@@ -13,6 +13,11 @@
 # ---
 
 # # Introduction
+# Dans les prairies, les arbustes peuvent progressivement envahir les zones dominées par les graminées.
+# Cette dynamique peut mener à une diminution des prairies ouvertes. Une intervention fréquemment utilisée
+# en écologie est le feu contrôlé, qui affecte davantage les arbustes que les herbes (Source). Dans ce
+# projet, nous simulons cette intervention à l'aide d'un modèle de transition pour évaluer si le feu contrôlé
+# permet de limiter l'expansion des arbustes et de maintenir les prairies.
 
 # # Présentation du modèle
 
