@@ -134,7 +134,38 @@ axislegend(ax2)
 tightlimits!(ax2)
 f2
 
-# # Présentation des résultats
+# # Résultats
+
+## **Dynamique des états sans feu contrôlé:**
+# La simulation du modèle sans intervention montre une modification progressive de la distribution des parcelles
+# entre les 3 états (Figure 1). Au début de la simulation, la majorité des parcelles est occupée par l’état “grass”,
+# soit 80 parcelles, tandis que les états “shrubs” et “barren” comptent chacun 10 parcelles.
+
+# Au cours des premières générations, le nombre de parcelles occupées par le “grass” diminue rapidement, passant
+# d’environ 80 parcelles à environ 35 parcelles vers la 10e génération (Figure 1). Parallèlement, le nombre de
+# parcelles dominées par les “shrubs” augmente fortement durant cette période initiale, passant d’environ 10 parcelles 
+# à plus de 40 parcelles.
+
+# Après environ 20 générations, les valeurs des trois états atteignent un plateau. Le nombre de parcelles dominées 
+# par les “shrubs” se stabilise autour de 45-50 parcelles, tandis que les “grass” se maintiennent autour de 33 parcelles
+# Les parcelles “barren” augmentent légèrement au début de la simulation, passant d’environ 10 à environ 18 parcelles, 
+# puis demeurent relativement constantes pour le reste des générations simulées (Figure 1).
+
+## **Dynamique des états avec feu contrôlé:**
+# Lorsque la simulation inclut un feu contrôlé, la distribution des parcelles entre les états évolue différemment (Figure 2). 
+# Au début de la simulation, la distribution initiale est identique à celle du scénario précédent, avec 80 parcelles dominées
+# par les “grass” et 10 parcelles dans chacun des deux autres états.
+
+# Durant les premières générations, le nombre de parcelles dominées par les “grass” diminue rapidement, passant d’environ 80 parcelles 
+# à environ 65 parcelles vers la génération 10 (Figure 2). Après cette phase initiale, la valeur reste relativement stable autour 
+# de 64-65 parcelles pour le reste de la simulation. Le nombre de parcelles dominées par les “shrubs” demeure relativement faible dans 
+# ce scénario. Il augmente légèrement au début de la simulation pour atteindre environ 12 parcelles, puis diminue légèrement et se stabilise 
+# autour de 11 parcelles après une vingtaine de générations (Figure 2).
+
+# Les parcelles “barren” augmentent progressivement au début de la simulation, passant d’environ 10 parcelles à environ 24 parcelles vers 
+# la génération 15. Par la suite, cette valeur demeure stable jusqu’à la fin de la simulation (Figure 2).
+
+
 
 # # Discussion
 
