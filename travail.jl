@@ -15,7 +15,7 @@
 # # Introduction
 # Dans les prairies, les arbustes peuvent progressivement envahir les zones dominées par les graminées.
 # Cette dynamique peut mener à une diminution des prairies ouvertes. Une intervention fréquemment utilisée
-# en écologie est le feu contrôlé, qui affecte davantage les arbustes que les herbes (Source). Dans ce
+# en écologie est le feu contrôlé, qui affecte davantage les arbustes que les herbes (Daryanto et al., 2019). Dans ce
 # projet, nous simulons cette intervention à l'aide d'un modèle de transition pour évaluer si le feu contrôlé
 # permet de limiter l'expansion des arbustes et de maintenir les prairies.
 
@@ -168,6 +168,60 @@ f2
 
 
 # # Discussion
+
+# L’objectif de cette simulation était d’évaluer si l’introduction d’un feu contrôlé peut limiter l’expansion des arbustes (shrubs) 
+# et favoriser le maintien des prairies dominées par les graminées (grass). Nous avons émis l’hypothèse que l’absence de feu 
+# favoriserait la dominance des arbustes, tandis que l’introduction d’un feu contrôlé permettrait de maintenir un état dominé 
+# par les graminées.
+
+# Les résultats obtenus sans feu contrôlé montrent une diminution rapide du nombre de parcelles dominées par les graminées, 
+# accompagnée d’une augmentation importante des parcelles occupées par les arbustes. Cette dynamique correspond au phénomène 
+# d’encroûtement ligneux (shrub encroachment), largement documenté dans les écosystèmes de prairies, où les plantes ligneuses 
+# envahissent progressivement les zones dominées par les herbacées (O’Connor et al., 2019 ; Daryanto et al., 2019). 
+# Dans la simulation, cette transition conduit à une stabilisation du système vers un état dominé par les arbustes après 
+# plusieurs générations. Ce résultat est cohérent avec le concept d’états stables alternatifs, selon lequel les prairies et 
+# les formations arbustives peuvent représenter deux équilibres écologiques distincts. Une fois les arbustes établis, 
+# ils peuvent maintenir leur dominance en exploitant plus efficacement certaines ressources, notamment l’eau et la lumière, 
+# ce qui limite le développement des graminées (Daryanto et al., 2019).
+
+# Cette transition s’accompagne également d’une diminution importante des parcelles dominées par les graminées. Dans la 
+# littérature,l’expansion des arbustes est souvent associée à une réduction de la productivité herbacée et à une modification 
+# de la structure des prairies (Daryanto et al., 2019). Les résultats de la simulation suivent cette tendance, puisque la 
+# dominance initiale des graminées diminue fortement lorsque le feu, une perturbation écologique importante dans ces écosystèmes, 
+# est absent.
+
+# À l’inverse, l’introduction d’un feu contrôlé dans le modèle permet de maintenir une proportion importante de parcelles dominées 
+# par les graminées, tandis que l’abondance des arbustes demeure relativement faible. Ce résultat concorde avec de nombreuses 
+# études montrant que le feu constitue un facteur écologique majeur dans le maintien des prairies ouvertes. En perturbant davantage 
+# les plantes ligneuses que les graminées, les incendies peuvent limiter l’établissement et la croissance des arbustes, empêchant 
+# ainsi la conversion progressive des prairies en formations arbustives (Daryanto et al., 2019 ; Ling et al., 2023). Plusieurs 
+# travaux suggèrent également que l’efficacité du feu dépend en grande partie de sa capacité à affecter les jeunes arbustes, 
+# qui sont généralement plus sensibles aux perturbations que les individus adultes (Daryanto et al., 2019 ; Alfaro-Reyna et al., 2025).
+
+# La simulation met aussi en évidence une augmentation du nombre de parcelles à sol nu (barren) lorsque le feu contrôlé est appliqué. 
+# Cette tendance est également rapportée dans la littérature. Bien que le feu puisse favoriser la production de biomasse herbacée et 
+# maintenir les prairies, il peut aussi entraîner une augmentation de la proportion de sol exposé, notamment immédiatement après 
+# les brûlages (Daryanto et al., 2019). Cette augmentation du sol nu représente un compromis important dans la gestion des écosystèmes 
+# de prairies. En effet, si le feu contribue au maintien des graminées et à la limitation des arbustes, il peut aussi réduire temporairement 
+# la couverture végétale et augmenter la vulnérabilité du sol à l’érosion ou à la dégradation (Daryanto et al., 2019).
+
+# Dans l’ensemble, les résultats de cette simulation suggèrent que le feu agit comme une perturbation écologique importante permettant de 
+# maintenir la dominance des graminées et de limiter l’expansion des arbustes dans les prairies. Toutefois, ils illustrent également que 
+# cette stratégie de gestion peut entraîner certains effets secondaires, notamment une augmentation du sol nu, ce qui souligne l’importance 
+# d’un équilibre dans l’utilisation des feux contrôlés.
+
+# **Limites du modèle**
+# Cette simulation présente certaines limites qui doivent être considérées lors de l’interprétation des résultats. Le modèle 
+# repose sur un nombre limité d’états de végétation et sur des probabilités de transition fixes, alors que les écosystèmes 
+# naturels sont influencés par de nombreux facteurs supplémentaires, tels que les conditions climatiques, la disponibilité 
+# en eau, le broutage par les herbivores ou la variabilité de l’intensité des incendies. De plus, le modèle ne tient 
+# pas compte de la régénération à long terme des arbustes après les incendies, un phénomène observé dans plusieurs écosystèmes. 
+# L’intégration de ces variables dans de futures simulations permettrait d’obtenir une représentation plus réaliste de la 
+# dynamique des prairies.
+
+
+
+
 
 # On peut aussi citer des références dans le document `references.bib`,
 # @ermentrout1993cellular -- la bibliographie sera ajoutée automatiquement à la
