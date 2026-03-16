@@ -39,6 +39,14 @@
 
 # # Présentation du modèle
 
+# La dynamique de la végétation est simulée avec un modèle simple où chaque parcelle peut être dans trois états : 
+# sol nu (barren), graminées (grass) ou arbustes (shrubs). Une matrice de transition indique la probabilité qu’une 
+# parcelle reste dans le même état ou change d’état d’une génération à la suivante.
+
+# Le modèle simule ainsi comment le nombre de parcelles dans chaque état évolue au fil du temps. Deux matrices de 
+# transition sont utilisées pour représenter deux situations : sans feu contrôlé et avec feu contrôlé, ce qui permet 
+# de comparer l’effet du feu sur la présence des graminées et des arbustes dans la prairie.
+
 # # Implémentation
 
 # ## 1. Importation des packages nécessaires au modèle
