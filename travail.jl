@@ -13,11 +13,29 @@
 # ---
 
 # # Introduction
-# Dans les prairies, les arbustes peuvent progressivement envahir les zones dominées par les graminées.
-# Cette dynamique peut mener à une diminution des prairies ouvertes. Une intervention fréquemment utilisée
-# en écologie est le feu contrôlé, qui affecte davantage les arbustes que les herbes (Daryanto et al., 2019). Dans ce
-# projet, nous simulons cette intervention à l'aide d'un modèle de transition pour évaluer si le feu contrôlé
-# permet de limiter l'expansion des arbustes et de maintenir les prairies.
+
+# Dans de nombreux écosystèmes de prairies, la dynamique de la végétation peut être influencée par l’expansion progressive
+# des plantes ligneuses dans les zones dominées par les graminées. Ce phénomène, souvent appelé shrub encroachment, entraîne 
+# une transformation graduelle des prairies ouvertes en formations arbustives et peut modifier la structure et le fonctionnement 
+# de ces écosystèmes (O’Connor et al., 2019 ; Daryanto et al., 2019). Cette transition est fréquemment associée à une diminution 
+# de la productivité herbacée et à une modification de la composition de la végétation, ce qui peut compromettre le maintien 
+# des prairies naturelles (Daryanto et al., 2019).
+
+# Parmi les facteurs écologiques capables d’influencer cette dynamique, le feu constitue une perturbation importante dans 
+# de nombreux écosystèmes de prairies. Les incendies affectent généralement davantage les plantes ligneuses que les graminées, 
+# ce qui peut limiter l’établissement et la croissance des arbustes et favoriser le maintien des prairies ouvertes 
+# (Daryanto et al., 2019 ; Ling et al., 2023). Ainsi, les feux contrôlés sont parfois utilisés comme outil de gestion 
+# écologique pour ralentir l’expansion des arbustes et maintenir la dominance des graminées.
+
+# L’objectif de cette étude est de comparer la dynamique de la végétation dans un système de prairies en présence ou 
+# en absence de feu contrôlé à l’aide d’un modèle de transition. Dans la simulation, trois états de végétation sont 
+# considérés : "grass" représente les parcelles dominées par les graminées, "shrubs" correspond aux parcelles occupées 
+# par des arbustes et "barren" désigne les parcelles à sol nu ou sans couverture végétale. Nous posons l’hypothèse que 
+# l’absence de feu favoriserait l’expansion des arbustes, tandis que l’introduction d’un feu contrôlé permettrait de 
+# maintenir une plus grande proportion de parcelles dominées par les graminées. Pour tester cette hypothèse, un modèle 
+# de simulation a été utilisé afin de représenter les transitions entre ces états de végétation et d’observer leur 
+# évolution au fil des générations.
+ 
 
 # # Présentation du modèle
 
